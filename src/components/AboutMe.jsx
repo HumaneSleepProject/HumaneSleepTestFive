@@ -7,6 +7,7 @@ import { moreInfo } from "../data";
 // Components
 import { Col, Container, Row } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
+import HSPLogo from "./HSPLogo.png"
 
 const StyledAboutMe = styled.section`
   p {
@@ -40,8 +41,8 @@ export default function AboutMe() {
             </Col>
             <Col className="d-none d-md-block text-center">
               <img
-                src={avatar_url}
-                alt="GitHub Avatar"
+                src={HSPLogo}
+                alt="HSPLogo"
                 loading="lazy"
                 className="mx-auto rounded-circle"
                 style={{ width: "15rem", height: "15rem" }}

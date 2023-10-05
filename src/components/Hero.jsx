@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import styled from "styled-components";
 // Icons
 import { Icon } from "@iconify/react";
+import HSPLogo from "./HSPLogo.png"
 // Media
 import Logo from "../images/logo.svg";
 import { Light, Dark } from "../data";
@@ -93,13 +94,13 @@ export default function Hero() {
               <SocialLinks />
             </div>
           </Col>
-          <Col className="d-none d-md-block">
+          {/* <Col className="d-none d-md-block">
             <img
-              src={Logo}
-              alt="React Logo"
+              src={HSPLogo}
+              alt="HSP Logo"
               className="w-75 mx-auto hero-img"
             />
-          </Col>
+          </Col> */}
         </Row>
         <Row className="align-items-end down-container">
           <Col className="m-4 text-center">
