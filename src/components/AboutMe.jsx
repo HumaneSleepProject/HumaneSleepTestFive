@@ -7,7 +7,7 @@ import { moreInfo } from "../data";
 // Components
 import { Col, Container, Row } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
-import HSPLogo from "./HSPLogo.png"
+import HSPLogo from "./hsp.png"
 
 const StyledAboutMe = styled.section`
   p {

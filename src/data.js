@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
-import HSPLogo from "./components/HSPLogo.png"
+import HSPLogo from "./components/hsp.png"
 
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
