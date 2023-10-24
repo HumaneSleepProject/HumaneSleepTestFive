@@ -6,6 +6,7 @@ import { Icon } from "@iconify/react";
 
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
+import HSPLogo from "./components/HSPLogo.png"
 
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
@@ -21,7 +22,7 @@ export { HeroDark as Dark };
 export const githubUsername = "HumaneSleepProject";
 
 // Navbar Logo image
-export const navLogo = undefined;
+export const navLogo = HSPLogo;
 
 // Blog link icon - https://icon-sets.iconify.design/
 export const Blog = <Icon icon="ph:link-bold" />;

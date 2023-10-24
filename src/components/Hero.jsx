@@ -94,13 +94,13 @@ export default function Hero() {
               <SocialLinks />
             </div>
           </Col>
-          {/* <Col className="d-none d-md-block">
+          <Col className="d-none d-md-block">
             <img
               src={HSPLogo}
               alt="HSP Logo"
               className="w-75 mx-auto hero-img"
             />
-          </Col> */}
+          </Col>
         </Row>
         <Row className="align-items-end down-container">
           <Col className="m-4 text-center">
