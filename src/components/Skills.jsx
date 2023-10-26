@@ -14,11 +14,11 @@ export default function Skills() {
       <section className="section">
         <Container className="text-center">
           <Title>
-            <h2>Skills</h2>
+            <h2>Links</h2>
             <div className="underline"></div>
           </Title>
           <Row className="mt-3 align-items-center">
-            {skillData.map((skills) => {
+            {/* {skillData.map((skills) => {
               return (
                 <Col xs={4} key={skills.id} className="my-md-5">
                   <figure>
@@ -27,7 +27,10 @@ export default function Skills() {
                   </figure>
                 </Col>
               );
-            })}
+            })} */}
+            <div className="d-flex align-items-center justify-content-center">
+              <SocialLinks />
+            </div>
           </Row>
           {resume && (
             <a href={resume}>

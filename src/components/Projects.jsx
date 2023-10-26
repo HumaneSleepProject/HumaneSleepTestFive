@@ -48,7 +48,7 @@ export default function Projects() {
         <Container>
           <Container className="d-flex">
             <Title>
-              <h2>Projects</h2>
+              <h2>Past Events</h2>
               <div className="underline"></div>
             </Title>
           </Container>
@@ -96,7 +96,7 @@ export default function Projects() {
                         theme === "light" ? "outline-dark" : "outline-light"
                       }
                     >
-                      All <Icon icon="icomoon-free:github" /> Projects
+                      All Past Events
                     </Button>
                   </Link>
                 </Container>
