@@ -60,7 +60,7 @@ a:hover {
 }
 
 .title {
-    font-family: "Helvetica";
+    font-family: "Georgia";
 }
 
 .card {
