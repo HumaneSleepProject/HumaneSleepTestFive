@@ -27,9 +27,9 @@ export const navLogo = HSPLogo;
 // Blog link icon - https://icon-sets.iconify.design/
 export const Blog = <Icon icon="ph:link-bold" />;
 
-/* About Me
+/* About Us
  **************************************************************
-  Add a second paragraph for the about me section.
+  Add a second paragraph for the about us section.
 */
 export const moreInfo =
   "I enjoy learning about technology and helping others use it to improve their lives and be more productive. I built this site with React, React Bootstrap, Redux, and the GitHub REST API.";
