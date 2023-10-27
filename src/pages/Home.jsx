@@ -13,12 +13,14 @@ import Footer from "../components/Footer";
 export default function Home() {
   const { name } = useSelector(selectData);
 
-  React.useEffect(
-    function () {
-      document.title = `${name} | Portfolio`;
-    },
-    [name]
-  );
+  // React.useEffect(
+  //   function () {
+  //     document.title = `${name} | Portfolio`;
+  //   },
+  //   [name]
+  // );
+
+  document.title = `HumaneSleepProject | Portfolio`;
 
   return (
     <>

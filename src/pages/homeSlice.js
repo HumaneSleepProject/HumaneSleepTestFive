@@ -10,7 +10,7 @@ const initialState = {
 
 export const url = `https://api.github.com/users/${githubUsername}`;
 export const testUrl = `https://api.github.com/users/HumaneSleepProject`
-export const linkedInUrl = `https://www.linkedin.com/company/humane-sleep-project`
+export const linkedInUrl = `https://www.linkedin.com/company/humanesleepproject`
 
 export const fetchGitHubInfo = createAsyncThunk(
   "home/fetchGitHubInfo",

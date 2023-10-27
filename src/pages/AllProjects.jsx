@@ -50,12 +50,14 @@ export default function AllProjects() {
   const data = useSelector(selectData);
   const { name } = useSelector(homeData);
 
-  React.useEffect(
-    function () {
-      document.title = `${name} | All Projects`;
-    },
-    [name]
-  );
+  // React.useEffect(
+  //   function () {
+  //     document.title = `${name} | All Projects`;
+  //   },
+  //   [name]
+  // );
+
+  document.title = `HumaneSleepProject | All Projects`;
 
   React.useEffect(
     function () {
