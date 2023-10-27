@@ -16,7 +16,7 @@ export const fetchGitHubInfo = createAsyncThunk(
   "home/fetchGitHubInfo",
   async (thunkApi, { rejectWithValue }) => {
     try {
-      const response = await fetch(linkedInUrl).then(function (res) {
+      const response = await fetch(url).then(function (res) {
         if (!res.ok) {
           throw new Error(res.status);
         }
