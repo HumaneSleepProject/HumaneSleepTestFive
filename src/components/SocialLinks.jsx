@@ -15,21 +15,27 @@ const StyledSocialLinks = styled.div`
 
 export default function SocialLinks() {
   const { blog, html_url } = useSelector(selectData);
-
+  const linkedInUrl = `https://www.linkedin.com/company/humanesleepproject`
   return (
     <StyledSocialLinks>
-      <a
+      {/* <a
         href={html_url}
         aria-label="Check out my LinkedIn profile."
         className="link-icons"
       >
         <Icon icon="icomoon-free:linkedin" />
+      </a> */}
+
+      <a
+        href={linkedInUrl}
+        aria-label="External link"
+        className="link-icons"
+      >
+        <Icon icon="icomoon-free:linkedin" />
       </a>
-      {blog && (
-        <a href={blog} aria-label="External link" className="link-icons">
-          {Blog}
-        </a>
-      )}
+      {/* <a href={blog} aria-label="External link" className="link-icons">
+        {Blog}
+      </a> */}
     </StyledSocialLinks>
   );
 }
