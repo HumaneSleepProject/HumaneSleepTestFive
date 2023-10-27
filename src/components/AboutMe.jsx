@@ -41,7 +41,7 @@ export default function AboutMe() {
             </Col>
             <Col className="d-none d-md-block text-center">
               <img
-                src={GroupHsp}
+                src={GroupHSP}
                 alt="GroupHSP"
                 loading="lazy"
                 className="mx-auto rounded-circle"
