@@ -32,7 +32,7 @@ export const Blog = <Icon icon="ph:link-bold" />;
   Add a second paragraph for the about us section.
 */
 export const moreInfo =
-  "I enjoy learning about technology and helping others use it to improve their lives and be more productive. I built this site with React, React Bootstrap, Redux, and the GitHub REST API.";
+  "Humane Sleep Project is dedicated to providing assistance to individuals facing homelessness by ensuring access to essential sleep provisions. Recognizing sleep as a fundamental human necessity, we strongly believe that every person deserves the opportunity to enjoy a restful and comfortable night's sleep.";
 
 /* Skills
  ************************************************************** 
