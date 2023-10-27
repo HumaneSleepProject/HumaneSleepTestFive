@@ -37,14 +37,12 @@ const StyledNotFound = styled.main`
 export default function NotFound() {
   const { name } = useSelector(selectData);
 
-  // React.useEffect(
-  //   function () {
-  //     document.title = `${name} | Portfolio`;
-  //   },
-  //   [name]
-  // );
-
-  document.title = `HumaneSleepProject | Portfolio`;
+  React.useEffect(
+    function () {
+      document.title = `${name} | Portfolio`;
+    },
+    [name]
+  );
 
   return (
     <>
