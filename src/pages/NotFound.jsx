@@ -39,9 +39,9 @@ export default function NotFound() {
 
   React.useEffect(
     function () {
-      document.title = `${name} | Portfolio`;
+      document.title = `HumaneSleepProject | Portfolio`;
     },
-    [name]
+    [HumaneSleepProject]
   );
 
   return (

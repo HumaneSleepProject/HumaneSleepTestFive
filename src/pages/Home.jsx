@@ -15,9 +15,9 @@ export default function Home() {
 
   React.useEffect(
     function () {
-      document.title = `${name} | Portfolio`;
+      document.title = `HumaneSleepProject | Portfolio`;
     },
-    [name]
+    [HumaneSleepProject]
   );
 
   return (

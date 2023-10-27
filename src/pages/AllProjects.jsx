@@ -52,9 +52,9 @@ export default function AllProjects() {
 
   React.useEffect(
     function () {
-      document.title = `${name} | All Projects`;
+      document.title = `HumaneSleepProject | All Projects`;
     },
-    [name]
+    [HumaneSleepProject]
   );
 
   React.useEffect(
