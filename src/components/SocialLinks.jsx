@@ -18,24 +18,24 @@ export default function SocialLinks() {
   const linkedInUrl = `https://www.linkedin.com/company/humanesleepproject`
   return (
     <StyledSocialLinks>
-      {/* <a
+      <a
         href={html_url}
-        aria-label="Check out my LinkedIn profile."
+        aria-label="Check out my Github profile."
         className="link-icons"
       >
         <Icon icon="icomoon-free:linkedin" />
-      </a> */}
+      </a>
 
-      <a
+      {/* <a
         href={linkedInUrl}
         aria-label="External link"
         className="link-icons"
       >
         <Icon icon="icomoon-free:linkedin" />
-      </a>
-      {/* <a href={blog} aria-label="External link" className="link-icons">
-        {Blog}
       </a> */}
+      {blog && <a href={blog} aria-label="External link" className="link-icons">
+        {Blog}
+      </a>}
     </StyledSocialLinks>
   );
 }
