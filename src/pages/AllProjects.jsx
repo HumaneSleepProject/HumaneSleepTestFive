@@ -54,7 +54,7 @@ export default function AllProjects() {
     function () {
       document.title = `HumaneSleepProject | All Projects`;
     },
-    ["HumaneSleepProject"]
+    [name]
   );
 
   React.useEffect(

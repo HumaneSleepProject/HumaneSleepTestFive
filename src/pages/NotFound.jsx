@@ -41,7 +41,7 @@ export default function NotFound() {
     function () {
       document.title = `HumaneSleepProject | Portfolio`;
     },
-    ["HumaneSleepProject"]
+    [name]
   );
 
   return (

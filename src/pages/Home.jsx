@@ -17,7 +17,7 @@ export default function Home() {
     function () {
       document.title = `HumaneSleepProject | Portfolio`;
     },
-    ["HumaneSleepProject"]
+    [name]
   );
 
   return (
