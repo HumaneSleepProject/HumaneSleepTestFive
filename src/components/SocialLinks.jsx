@@ -15,7 +15,9 @@ const StyledSocialLinks = styled.div`
 
 export default function SocialLinks() {
   const { blog, html_url } = useSelector(selectData);
-  const linkedInUrl = `https://www.linkedin.com/company/humanesleepproject`
+  const linkedInUrl = `https://www.linkedin.com/company/humanesleepproject`;
+  const instaUrl = `instagram.com/humanesleepproject`;
+  const fbUrl = `https://www.facebook.com/profile.php?id=100092845128371&mibextid=LQQJ4d`;
   return (
     <StyledSocialLinks>
       {/* <a
@@ -32,6 +34,20 @@ export default function SocialLinks() {
         className="link-icons"
       >
         <Icon icon="icomoon-free:linkedin" />
+      </a>
+      <a
+        href={instaUrl}
+        aria-label="External link"
+        className="link-icons"
+      >
+        <Icon icon="icomoon-free:instagram" />
+      </a>
+      <a
+        href={fbUrl}
+        aria-label="External link"
+        className="link-icons"
+      >
+        <Icon icon="icomoon-free:facebook" />
       </a>
       {/* </a>
       {blog && <a href={blog} aria-label="External link" className="link-icons">
