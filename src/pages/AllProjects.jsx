@@ -58,7 +58,7 @@ export default function AllProjects() {
   //   [name]
   // );
 
-  document.title = `HumaneSleepProject | All Projects`;
+  document.title = `HumaneSleepProject | All Events`;
 
   React.useEffect(
     function () {
@@ -123,155 +123,170 @@ export default function AllProjects() {
     },
     [searchInput]
   );
+  
+  //Will just be a static page of blog posts and links
+  return (
+    <div>
+      <h1>
+        Blog Post 1
+      </h1>
+      <h1>
+        Blog Post 2
+      </h1>
+      <h1>
+        Blog Post 3
+      </h1>
+    </div>
+  );
 
-  if (isLoading) {
-    return (
-      <>
-        <main>
-          <StyledSection className="d-flex flex-column justify-content-center">
-            <Container className="d-flex">
-              <Title>
-                <h2>
-                  All Events
-                </h2>
-                <div className="underline"></div>
-              </Title>
-            </Container>
-            <Loading />
-          </StyledSection>
-        </main>
-        <Footer />
-      </>
-    );
-  } else if (error) {
-    return (
-      <>
-        <main>
-          <StyledSection className="d-flex flex-column justify-content-center">
-            <Container className="d-flex">
-              <Title>
-                <h2>
-                  All Events
-                </h2>
-                <div className="underline"></div>
-              </Title>
-            </Container>
-            <h2 className="my-5 text-center">{error}</h2>
-          </StyledSection>
-        </main>
-        <Footer />
-      </>
-    );
-  } else {
-    return (
-      <>
-        <main>
-          <StyledSection className="d-flex flex-column justify-content-center">
-            <Container className="d-flex">
-              <Title>
-                <h2>
-                  All Events
-                </h2>
-                <div className="underline"></div>
-              </Title>
-            </Container>
-            <Container>
-              <InputGroup className="mx-auto mb-3">
-                <InputGroup.Text id="search">
-                  <Icon icon="ic:round-search" />
-                </InputGroup.Text>
-                <FormControl
-                  placeholder="Project name"
-                  aria-label="Search projects"
-                  aria-describedby="search"
-                  onChange={(e) => setSearchInput(e.currentTarget.value)}
-                />
-              </InputGroup>
-              <Row
-                xs={1}
-                md={2}
-                lg={3}
-                className="g-4 justify-content-center row"
-              >
-                {searchInput.length > 0
-                  ? filteredResults.map(function ({
-                      id,
-                      image,
-                      name,
-                      description,
-                      html_url,
-                      homepage,
-                    }) {
-                      return (
-                        <Col key={id}>
-                          <StyledCard
-                            image={image}
-                            name={name}
-                            description={description}
-                            url={html_url}
-                            demo={homepage}
-                          />
-                        </Col>
-                      );
-                    })
-                  : filteredResults.map(function ({
-                      id,
-                      image,
-                      name,
-                      description,
-                      html_url,
-                      homepage,
-                    }) {
-                      return (
-                        <Col key={id}>
-                          <StyledCard
-                            image={image}
-                            name={name}
-                            description={description}
-                            url={html_url}
-                            demo={homepage}
-                          />
-                        </Col>
-                      );
-                    })}
-              </Row>
-              <Container className="d-flex justify-content-center mt-4">
-                {pageItems.length <= 2 ? (
-                  <Pagination size="lg" className="mb-4">
-                    {pageItems}
-                  </Pagination>
-                ) : (
-                  <Pagination className="mb-5">
-                    <Pagination.Prev
-                      onClick={() =>
-                        activePage === 1
-                          ? setActivePage(pageItems.length)
-                          : setActivePage(activePage - 1)
-                      }
-                    />
-                    {pageItems[0]}
-                    <Pagination.Ellipsis />
-                    <Pagination.Item active={true}>
-                      {activePage}
-                    </Pagination.Item>
-                    <Pagination.Ellipsis />
-                    {pageItems[pageItems.length - 1]}
-                    <Pagination.Next
-                      onClick={() =>
-                        activePage === pageItems.length
-                          ? setActivePage(1)
-                          : setActivePage(activePage + 1)
-                      }
-                    />
-                  </Pagination>
-                )}
-              </Container>
-            </Container>
-          </StyledSection>
-        </main>
-        <BackToTop home={"Home"} />
-        <Footer />
-      </>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <>
+  //       <main>
+  //         <StyledSection className="d-flex flex-column justify-content-center">
+  //           <Container className="d-flex">
+  //             <Title>
+  //               <h2>
+  //                 All Events
+  //               </h2>
+  //               <div className="underline"></div>
+  //             </Title>
+  //           </Container>
+  //           <Loading />
+  //         </StyledSection>
+  //       </main>
+  //       <Footer />
+  //     </>
+  //   );
+  // } else if (error) {
+  //   return (
+  //     <>
+  //       <main>
+  //         <StyledSection className="d-flex flex-column justify-content-center">
+  //           <Container className="d-flex">
+  //             <Title>
+  //               <h2>
+  //                 All Events
+  //               </h2>
+  //               <div className="underline"></div>
+  //             </Title>
+  //           </Container>
+  //           <h2 className="my-5 text-center">{error}</h2>
+  //         </StyledSection>
+  //       </main>
+  //       <Footer />
+  //     </>
+  //   );
+  // } else {
+  //   return (
+  //     <>
+  //       <main>
+  //         <StyledSection className="d-flex flex-column justify-content-center">
+  //           <Container className="d-flex">
+  //             <Title>
+  //               <h2>
+  //                 All Events
+  //               </h2>
+  //               <div className="underline"></div>
+  //             </Title>
+  //           </Container>
+  //           <Container>
+  //             <InputGroup className="mx-auto mb-3">
+  //               <InputGroup.Text id="search">
+  //                 <Icon icon="ic:round-search" />
+  //               </InputGroup.Text>
+  //               <FormControl
+  //                 placeholder="Project name"
+  //                 aria-label="Search projects"
+  //                 aria-describedby="search"
+  //                 onChange={(e) => setSearchInput(e.currentTarget.value)}
+  //               />
+  //             </InputGroup>
+  //             <Row
+  //               xs={1}
+  //               md={2}
+  //               lg={3}
+  //               className="g-4 justify-content-center row"
+  //             >
+  //               {searchInput.length > 0
+  //                 ? filteredResults.map(function ({
+  //                     id,
+  //                     image,
+  //                     name,
+  //                     description,
+  //                     html_url,
+  //                     homepage,
+  //                   }) {
+  //                     return (
+  //                       <Col key={id}>
+  //                         <StyledCard
+  //                           image={image}
+  //                           name={name}
+  //                           description={description}
+  //                           url={html_url}
+  //                           demo={homepage}
+  //                         />
+  //                       </Col>
+  //                     );
+  //                   })
+  //                 : filteredResults.map(function ({
+  //                     id,
+  //                     image,
+  //                     name,
+  //                     description,
+  //                     html_url,
+  //                     homepage,
+  //                   }) {
+  //                     return (
+  //                       <Col key={id}>
+  //                         <StyledCard
+  //                           image={image}
+  //                           name={name}
+  //                           description={description}
+  //                           url={html_url}
+  //                           demo={homepage}
+  //                         />
+  //                       </Col>
+  //                     );
+  //                   })}
+  //             </Row>
+  //             <Container className="d-flex justify-content-center mt-4">
+  //               {pageItems.length <= 2 ? (
+  //                 <Pagination size="lg" className="mb-4">
+  //                   {pageItems}
+  //                 </Pagination>
+  //               ) : (
+  //                 <Pagination className="mb-5">
+  //                   <Pagination.Prev
+  //                     onClick={() =>
+  //                       activePage === 1
+  //                         ? setActivePage(pageItems.length)
+  //                         : setActivePage(activePage - 1)
+  //                     }
+  //                   />
+  //                   {pageItems[0]}
+  //                   <Pagination.Ellipsis />
+  //                   <Pagination.Item active={true}>
+  //                     {activePage}
+  //                   </Pagination.Item>
+  //                   <Pagination.Ellipsis />
+  //                   {pageItems[pageItems.length - 1]}
+  //                   <Pagination.Next
+  //                     onClick={() =>
+  //                       activePage === pageItems.length
+  //                         ? setActivePage(1)
+  //                         : setActivePage(activePage + 1)
+  //                     }
+  //                   />
+  //                 </Pagination>
+  //               )}
+  //             </Container>
+  //           </Container>
+  //         </StyledSection>
+  //       </main>
+  //       <BackToTop home={"Home"} />
+  //       <Footer />
+  //     </>
+  //   );
+  // }
 }
