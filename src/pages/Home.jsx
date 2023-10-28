@@ -28,7 +28,7 @@ export default function Home() {
       <main>
         <AboutMe />
         <Skills />
-        {/* <Projects /> */}
+        <Projects />
         <Contact />
       </main>
       <BackToTop home={"Home"} />

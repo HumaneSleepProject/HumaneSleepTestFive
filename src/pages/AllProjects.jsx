@@ -45,7 +45,8 @@ export default function AllProjects() {
   const [filteredResults, setFilteredResults] = React.useState([]);
   const [pageItems, setPageItems] = React.useState([]);
   const [activePage, setActivePage] = React.useState(1);
-  const isLoading = useSelector(selectIsLoading);
+  const isLoading 
+  = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const data = useSelector(selectData);
   const { name } = useSelector(homeData);
@@ -131,7 +132,7 @@ export default function AllProjects() {
             <Container className="d-flex">
               <Title>
                 <h2>
-                  All <Icon icon="mdi:github" /> Projects
+                  All Events
                 </h2>
                 <div className="underline"></div>
               </Title>
@@ -150,7 +151,7 @@ export default function AllProjects() {
             <Container className="d-flex">
               <Title>
                 <h2>
-                  All <Icon icon="mdi:github" /> Projects
+                  All Events
                 </h2>
                 <div className="underline"></div>
               </Title>
@@ -169,7 +170,7 @@ export default function AllProjects() {
             <Container className="d-flex">
               <Title>
                 <h2>
-                  All <Icon icon="mdi:github" /> Projects
+                  All Events
                 </h2>
                 <div className="underline"></div>
               </Title>

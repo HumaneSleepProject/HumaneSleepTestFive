@@ -60,7 +60,7 @@ a:hover {
 }
 
 .title {
-    font-family: "Georgia";
+    font-family: "Monaco", Monospace;
 }
 
 .card {

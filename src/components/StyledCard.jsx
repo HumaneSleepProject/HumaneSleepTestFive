@@ -55,8 +55,8 @@ export default function StyledCard({ image, name, description, url, demo }) {
         </Card.Body>
         <Card.Footer className="text-center">
           <Card.Link href={url}>
-            {"View on GitHub "}
-            <Icon icon="icomoon-free:github" />
+            {"View on Instagram "}
+            <Icon icon="icomoon-free:instagram" />
           </Card.Link>
         </Card.Footer>
       </Card>
