@@ -48,7 +48,7 @@ export default function Projects() {
         <Container>
           <Container className="d-flex">
             <Title>
-              <h2>Past Events</h2>
+              <h2>All Events</h2>
               <div className="underline"></div>
             </Title>
           </Container>
