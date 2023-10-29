@@ -13,7 +13,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Spin } from "./globalStyledComponents";
 import SocialLinks from "./SocialLinks";
 
-const StyledHero = styled.header`
+export const StyledHero = styled.header`
   position: relative;
   display: grid;
   place-items: center;
