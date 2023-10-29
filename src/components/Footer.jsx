@@ -18,7 +18,7 @@ const StyledFooter = styled.footer`
 export default function Footer() {
   return (
     <StyledFooter className="d-flex align-items-center justify-content-center p-2">
-      <h1> Website Template from Michael Huber : https://github.com/mshuber1981</h1>
+      <span style={{ fontStyle: '12px'}}> Website Template from Michael Huber : https://github.com/mshuber1981</span>
     </StyledFooter>
   );
 }
