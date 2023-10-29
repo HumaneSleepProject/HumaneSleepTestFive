@@ -9,11 +9,15 @@ import Logo from "./images/logo.svg";
 import HSPLogo from "./components/hsp.png"
 
 // Hero Images (add your images to the /images directory with the same names)
-import HeroLight from "./images/tanColor.jpg";
-import HeroDark from "./images/dark-screen.jpg";
+import HeroLight from "./images/GoldenStateBridgeLight.jpg";
+import HeroDark from "./images/GoldenStateBridgeDark.jpg";
+import BlogLight from "./images/white-screen.jpg";
+import BlogDark from "./images/dark-screen.jpg";
 // If you change the import names above then you need to change the export names below
 export { HeroLight as Light };
 export { HeroDark as Dark };
+export { BlogLight as BLight };
+export { BlogDark as BDark };
 
 /* START HERE
  **************************************************************

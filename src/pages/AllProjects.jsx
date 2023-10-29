@@ -21,7 +21,7 @@ import {
 } from "../components/globalStyledComponents";
 import StyledCard from "../components/StyledCard";
 import Footer from "../components/Footer";
-import { Light, Dark } from "../data";
+import { BLight, BDark } from "../data";
 
 const StyledSection = styled.section`
   position: relative;
@@ -73,8 +73,8 @@ const StyledSection = styled.section`
     &::before {
       background: ${({ theme }) =>
         theme.name === "light"
-          ? `url(${Light}) top center fixed no-repeat`
-          : `url(${Dark}) top center fixed no-repeat`};
+          ? `url(${BLight}) top center fixed no-repeat`
+          : `url(${BDark}) top center fixed no-repeat`};
       background-size: 100vw auto;
     }
   }
@@ -83,8 +83,8 @@ const StyledSection = styled.section`
     &::before {
       background: ${({ theme }) =>
         theme.name === "light"
-          ? `url(${Light}) center center fixed no-repeat`
-          : `url(${Dark}) center center fixed no-repeat`};
+          ? `url(${BLight}) center center fixed no-repeat`
+          : `url(${BDark}) center center fixed no-repeat`};
       background-size: cover;
     }
   }
