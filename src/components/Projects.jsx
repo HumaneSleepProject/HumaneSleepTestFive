@@ -52,7 +52,20 @@ export default function Projects() {
               <div className="underline"></div>
             </Title>
           </Container>
-          {isLoading && (
+          <Container className="text-center mt-5">
+            <Link to="/All-Projects">
+              <Button
+                size="lg"
+                variant={
+                  theme === "light" ? "outline-dark" : "outline-light"
+                }
+              >
+                To All Events
+              </Button>
+            </Link>
+          </Container>
+        </Container>
+          {/* {isLoading && (
             <Container className="d-flex">
               <Loading />
             </Container>
@@ -103,7 +116,7 @@ export default function Projects() {
               )}
             </>
           )}
-        </Container>
+        </Container> */}
       </section>
     </Element>
   );
