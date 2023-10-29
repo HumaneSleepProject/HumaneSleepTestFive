@@ -91,7 +91,7 @@ export default function Hero() {
           <Col>
             <h1 className="mb-3 display-3 title">Humane Sleep Project</h1>
             <div className="d-flex align-items-center justify-content-center">
-              <SocialLinks />
+              <h2> Based out of the Bay Area </h2>
             </div>
           </Col>
           <Col className="d-none d-md-block">
