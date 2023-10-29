@@ -196,7 +196,12 @@ export default function AllProjects() {
         </Row>
         <Row className="align-items-left text-left">
           <Col>
-            <h1> Content </h1>
+            <h2> At the Humane Sleep Project, based in Pleasanton, we've started an outreach into Oakland to assist the homeless community by providing crucial sleeping supplies and support to alleviate their hardships.
+
+We recognize the importance of maintaining hygiene for overall health and well-being, especially for those without homes. Therefore, we assembled 100 hygiene kits comprising essentials like toothbrushes, soap, and shampoo, and distributed them in Oakland among various homeless encampments and donated some to local housing projects.
+
+Our first outreach not only provided vital items but also allowed us to understand the needs of the homeless community better and forge meaningful connections.
+ </h2>
           </Col>
         </Row>
       </Container>
