@@ -44,7 +44,7 @@ export default function AboutMe() {
                 src={GroupHSP}
                 alt="GroupHSP"
                 loading="lazy"
-                className="mx-auto rounded-circle"
+                className="img-fluid"
                 style={{ width: "15rem", height: "15rem" }}
               />
             </Col>
