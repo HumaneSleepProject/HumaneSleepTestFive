@@ -1,48 +1,10 @@
-import styled from "styled-components";
-import { useSelector } from "react-redux";
-import { selectData } from "../pages/homeSlice";
-import { Element } from "react-scroll";
-// Data
-import { moreInfo } from "../data";
-// Components
-import { Col, Container, Row } from "react-bootstrap";
-import { Title } from "./globalStyledComponents";
-import GroupHSP from "../images/GroupHSP.jpg"
-
 const StyledAboutMe = styled.section`
   p {
     font-size: 1.25rem;
   }
   .img {
-    width: 18rem;
-    height: 18rem;
-  }
-`;
-
-const StyledImageSection = styled.section`
-  .image-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 3rem;
-  }
-
-  .image-item {
-    margin: 1rem;
-    text-align: center;
-  }
-
-  .image {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  .description {
-    margin-top: 1rem;
-    font-size: 1rem;
+    width: 15rem;
+    height: 15rem;
   }
 `;
 
@@ -60,13 +22,8 @@ export default function AboutMe() {
             </Title>
           </Container>
           <Row className="align-items-center mt-5">
-            <Col className="d-flex flex-column text-center">
-              <Container>
-                <p>{bio}</p>
-                {/* ... Additional content ... */}
-              </Container>
-            </Col>
-            <Col className="d-none d-md-block text-center">
+            <Col className="text-center">
+              {/* Content for the first column (Group HSP image) */}
               <img
                 src={GroupHSP}
                 alt="GroupHSP"
@@ -75,32 +32,36 @@ export default function AboutMe() {
                 style={{ width: "15rem", height: "15rem" }}
               />
             </Col>
+            <Col className="d-flex flex-column text-center">
+              {/* Content for the second column (bio and moreInfo) */}
+              <Container>
+                <p>{bio}</p>
+                {moreInfo && <p>{moreInfo}</p>}
+              </Container>
+            </Col>
+          </Row>
+          {/* Additional content for the side-by-side layout */}
+          <Row className="align-items-center mt-5">
+            {/* Add content for each side-by-side element here */}
+            {/* Example: */}
+            <Col className="text-center">
+              <img
+                src={/* Image source */}
+                alt={/* Alt text */}
+                loading="lazy"
+                className="img-fluid"
+                style={{ width: "15rem", height: "15rem" }}
+              />
+            </Col>
+            <Col className="d-flex flex-column text-center">
+              {/* Description for the side-by-side element */}
+              <Container>
+                <p>{/* Description for the image */}</p>
+              </Container>
+            </Col>
           </Row>
         </Container>
       </StyledAboutMe>
-
-      {/* New section for images and descriptions */}
-      <StyledImageSection>
-        <Container>
-          <Title>
-            <h2>Our Work</h2>
-            <div className="underline"></div>
-          </Title>
-          <Row className="image-container">
-            {/* Image 1 */}
-            <Col className="image-item">
-              <img src={/* Image source */} alt="Image 1" className="image" />
-              <p className="description">Description for Image 1</p>
-            </Col>
-            {/* Repeat for Images 2 to 6 */}
-            {/* Image 2 */}
-            {/* Image 3 */}
-            {/* Image 4 */}
-            {/* Image 5 */}
-            {/* Image 6 */}
-          </Row>
-        </Container>
-      </StyledImageSection>
     </Element>
   );
 }
