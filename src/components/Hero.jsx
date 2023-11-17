@@ -83,6 +83,9 @@ export default function Hero() {
   return (
     <StyledHero>
       <Container>
+
+      
+       {/* temp removal of hero info
         <Row className="align-items-center text-center">
           <Col>
             <h1 className="mb-3 display-3 title">Humane Sleep Project</h1>
@@ -101,7 +104,9 @@ export default function Hero() {
             </Link>
           </Col>
         </Row>
+        */} 
       </Container>
+      
     </StyledHero>
   );
 }
