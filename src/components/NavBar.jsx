@@ -12,62 +12,13 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import Logo from "./defaultNavLogo.svg";
 
 // #region styled-components
-const StyledSwitch = styled.label`
-  /* Slider pill */
-  display: flex;
-  width: 3.2rem;
-  font-size: 1.5rem;
-  border-radius: 30px;
-  transition: var(--transition);
-  border: 2px solid;
 
-  /* Hide defualt checkbox */
-  input[type="checkbox"] {
-    height: 0;
-    width: 0;
-    opacity: 0;
-  }
-
-  /* Move span when checked */
-  input[type="checkbox"]:checked + div {
-    transform: translateX(100%);
-  }
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: var(--transition);
-  }
-`;
-
+{/* incl. background for nav */}
 const FixedNavSpacer = styled.div`
   height: var(--nav-height);
+  background-color: #333; /* Set a dark background color for the spacer */
 `;
 
-function ThemeToggle() {
-  const { theme, toggleTheme, closeExpanded } = useAppContext();
-
-  return (
-    <StyledSwitch onClick={closeExpanded}>
-      <input
-        type="checkbox"
-        aria-label={`Toggle theme, currently ${theme}.`}
-        onClick={toggleTheme}
-      />
-      <div>
-        {theme === "light" ? (
-          <Icon icon="game-icons:sunflower" />
-        ) : (
-          <Icon icon="game-icons:moon" />
-        )}
-      </div>
-    </StyledSwitch>
-  );
-}
-// #endregion
-
-// #region component
 const propTypes = {
   Logo: PropTypes.node.isRequired,
 };
@@ -77,7 +28,7 @@ const defaultProps = {
 };
 
 export default function NavBar({ Logo }) {
-  const { theme, isExpanded, closeExpanded, toggleExpanded } = useAppContext();
+  const { isExpanded, closeExpanded, toggleExpanded } = useAppContext();
   const { pathname } = useLocation();
   const navLinks = {
     routes: [
@@ -101,8 +52,8 @@ export default function NavBar({ Logo }) {
         collapseOnSelect={true}
         expand="lg"
         expanded={isExpanded}
-        bg={theme === "light" ? "light" : "dark"}
-        variant={theme === "light" ? "light" : "dark"}
+        bg="dark"  // Set the default background color to dark
+        variant="dark"  // Set the default variant to dark
         fixed="top"
       >
         <Container>
@@ -154,9 +105,6 @@ export default function NavBar({ Logo }) {
                       </Nav.Item>
                     );
                   })}
-            </Nav>
-            <Nav>
-              <ThemeToggle />
             </Nav>
           </Navbar.Collapse>
         </Container>
