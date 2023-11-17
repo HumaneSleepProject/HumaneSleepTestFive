@@ -7,8 +7,9 @@ Variables
 ===============
 */
 :root {
-  --primary-light: #b0edfd;
-  /* Primary Color */
+  /* Dark Mode Colors */
+  --background: #333;
+  --color: #fff;
   --primary: #61DBFB;
   --primary-dark: #316e7e;
   --border: 1px solid #61DBFB;
@@ -24,8 +25,8 @@ Global Styles
 ===============
 */
 body {
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.color};
+  background: var(--background); /* Enforce dark mode background color */
+  color: var(--color); /* Enforce dark mode text color */
 }
 
 a:hover {
