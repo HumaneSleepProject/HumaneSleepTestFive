@@ -17,7 +17,7 @@ export default function SocialLinks() {
   const { blog, html_url } = useSelector(selectData);
   const linkedInUrl = `https://www.linkedin.com/company/humanesleepproject`;
   const instaUrl = `instagram.com/humanesleepproject`;
-  const fbUrl = `https://www.facebook.com/profile.php?id=100092845128371&mibextid=LQQJ4d`;
+  const fbUrl = `https://www.facebook.com/profile.php?id=61553491227395`;
   return (
     <StyledSocialLinks>
       {/* <a
