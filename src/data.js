@@ -36,7 +36,7 @@ export const Blog = <Icon icon="ph:link-bold" />;
   Add a second paragraph for the about us section.
 */
 export const moreInfo =
-  "Humane Sleep Project is dedicated to providing assistance to individuals facing homelessness by ensuring access to essential sleep provisions. Recognizing sleep as a fundamental human necessity, we strongly believe that every person deserves the opportunity to enjoy a restful and comfortable night's sleep.";
+  "At the Humane Sleep Project, we are dedicated to addressing challenges faced by the unsheltered population of California. With 135,771 individuals affected each night, it constitutes the majority of the nation's homeless population. Through our outreach efforts, we seek to establish connections with those in need and offer a listening ear and essential supplies through drives and direct donations. Long-term, we look to create opportunities for sustainable housing and practices to support the unsheltered population";
 
 /* Skills
  ************************************************************** 
