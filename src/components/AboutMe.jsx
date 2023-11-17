@@ -17,6 +17,13 @@ const StyledAboutMe = styled.section`
     width: 18rem;
     height: 18rem;
   }
+  .custom-img-style {
+    max-width: 15rem;
+    max-height: 15rem;
+    width: 100%;
+    height: auto;
+    /* Add any additional styling you need */
+  }
 `;
 
 export default function AboutMe() {
@@ -44,8 +51,7 @@ export default function AboutMe() {
                 src={GroupHSP}
                 alt="GroupHSP"
                 loading="lazy"
-                className="img-fluid"
-                style={{ width: "15rem", height: "15rem" }}
+                className="img-fluid custom-img-style"
               />
             </Col>
           </Row>
