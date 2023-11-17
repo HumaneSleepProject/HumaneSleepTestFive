@@ -4,19 +4,24 @@ import { useAppContext } from "../appContext";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-// Icons
+import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import { Icon } from "@iconify/react";
-// Components
-import { Container, Nav, Navbar } from "react-bootstrap";
-// Images
 import Logo from "./defaultNavLogo.svg";
 
-// #region styled-components
-
-{/* incl. background for nav */}
+// Dark background color for the spacer
 const FixedNavSpacer = styled.div`
   height: var(--nav-height);
-  background-color: #333; /* Set a dark background color for the spacer */
+  background-color: #333;
+`;
+
+// Green button styles
+const DonateButton = styled(Button)`
+  background-color: #4caf50; /* Green background color */
+  border-color: #4caf50; /* Green border color */
+  &:hover {
+    background-color: #45a049; /* Darker green on hover */
+    border-color: #45a049;
+  }
 `;
 
 const propTypes = {
@@ -27,33 +32,21 @@ const defaultProps = {
   Logo: Logo,
 };
 
-export default function NavBar({ Logo }) {
+export default function NavBar({ Logo, navLinks }) {
   const { isExpanded, closeExpanded, toggleExpanded } = useAppContext();
   const { pathname } = useLocation();
-  const navLinks = {
-    routes: [
-      { id: "1R", name: "Home", route: "/" },
-      { id: "2R", name: "All Past Events", route: "/All-Projects" },
-    ],
-    to: [
-      { id: "1T", name: "Home", to: "Home" },
-      { id: "2T", name: "About Us", to: "About" },
-      { id: "3T", name: "Links", to: "Skills" },
-      { id: "4T", name: "All Events", to: "Projects" },
-      { id: "5T", name: "Contact", to: "Contact" },
-    ],
-  };
 
   return (
     <>
       <FixedNavSpacer />
+      {/* Combined background and variant styling */}
       <Navbar
         id="nav"
-        collapseOnSelect={true}
+        collapseOnSelect
         expand="lg"
         expanded={isExpanded}
-        bg="dark"  // Set the default background color to dark
-        variant="dark"  // Set the default variant to dark
+        bg="dark"
+        variant="dark"
         fixed="top"
       >
         <Container>
@@ -72,39 +65,40 @@ export default function NavBar({ Logo }) {
           />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav navbarScroll className="me-auto">
+              {/* Map directly in JSX */}
               {pathname === "/"
-                ? navLinks.to.map((el) => {
-                    return (
-                      <Nav.Item key={el.id}>
-                        <ScrollLink
-                          to={el.to}
-                          spy={true}
-                          activeClass="active"
-                          className="nav-link"
-                          onClick={closeExpanded}
-                        >
-                          {el.name}
-                        </ScrollLink>
-                      </Nav.Item>
-                    );
-                  })
-                : navLinks.routes.map((el) => {
-                    return (
-                      <Nav.Item key={el.id}>
-                        <Link
-                          to={el.route}
-                          className={
-                            pathname === el.route
-                              ? "nav-link active"
-                              : "nav-link"
-                          }
-                          onClick={closeExpanded}
-                        >
-                          {el.name}
-                        </Link>
-                      </Nav.Item>
-                    );
-                  })}
+                ? navLinks.to.map((el) => (
+                    <Nav.Item key={el.id}>
+                      <ScrollLink
+                        to={el.to}
+                        spy
+                        activeClass="active"
+                        className="nav-link"
+                        onClick={closeExpanded}
+                      >
+                        {el.name}
+                      </ScrollLink>
+                    </Nav.Item>
+                  ))
+                : navLinks.routes.map((el) => (
+                    <Nav.Item key={el.id}>
+                      <Link
+                        to={el.route}
+                        className={
+                          pathname === el.route ? "nav-link active" : "nav-link"
+                        }
+                        onClick={closeExpanded}
+                      >
+                        {el.name}
+                      </Link>
+                    </Nav.Item>
+                  ))}
+            </Nav>
+            <Nav>
+              {/* Using the DonateButton component */}
+              <DonateButton variant="success" href="#donate">
+                Donate Now
+              </DonateButton>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -115,4 +109,3 @@ export default function NavBar({ Logo }) {
 
 NavBar.propTypes = propTypes;
 NavBar.defaultProps = defaultProps;
-// #endregion
