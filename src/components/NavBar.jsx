@@ -7,19 +7,18 @@ import styled from "styled-components";
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import { Icon } from "@iconify/react";
 import Logo from "./defaultNavLogo.svg";
+import SocialLinks from "./SocialLinks"; // Import SocialLinks component
 
-// Dark background color for the spacer
 const FixedNavSpacer = styled.div`
   height: var(--nav-height);
   background-color: #333;
 `;
 
-// Green button styles
 const DonateButton = styled(Button)`
-  background-color: #4caf50; /* Green background color */
-  border-color: #4caf50; /* Green border color */
+  background-color: #4caf50;
+  border-color: #4caf50;
   &:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
     border-color: #45a049;
   }
 `;
@@ -39,7 +38,6 @@ export default function NavBar({ Logo, navLinks }) {
   return (
     <>
       <FixedNavSpacer />
-      {/* Combined background and variant styling */}
       <Navbar
         id="nav"
         collapseOnSelect
@@ -65,7 +63,6 @@ export default function NavBar({ Logo, navLinks }) {
           />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav navbarScroll className="me-auto">
-              {/* Map directly in JSX */}
               {pathname === "/"
                 ? navLinks.to.map((el) => (
                     <Nav.Item key={el.id}>
@@ -95,7 +92,7 @@ export default function NavBar({ Logo, navLinks }) {
                   ))}
             </Nav>
             <Nav>
-              {/* Using the DonateButton component */}
+              <SocialLinks /> {/* Add SocialLinks component */}
               <DonateButton variant="success" href="#donate">
                 Donate Now
               </DonateButton>
