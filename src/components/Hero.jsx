@@ -4,10 +4,10 @@ import { Link } from "react-scroll";
 import styled from "styled-components";
 // Icons
 import { Icon } from "@iconify/react";
-import HSPLogo from "./hsp.png"
+import HSPLogo from "./hsp.png";
 // Media
 import Logo from "../images/logo.svg";
-import { Light, Dark } from "../data";
+import { Dark } from "../data"; // Remove Light import
 // Components
 import { Col, Container, Row } from "react-bootstrap";
 import { Spin } from "./globalStyledComponents";
@@ -28,10 +28,7 @@ const StyledHero = styled.header`
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${({ theme }) =>
-      theme.name === "light"
-        ? "linear-gradient(135deg, var(--primary), var(--bs-light))"
-        : "linear-gradient(135deg, var(--primary), var(--bs-dark))"};
+    background: linear-gradient(135deg, var(--primary), var(--bs-dark));
     z-index: -2;
   }
 
@@ -43,10 +40,7 @@ const StyledHero = styled.header`
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${({ theme }) =>
-      theme.name === "light"
-        ? "rgba(255, 255, 255, 0.2)"
-        : "rgba(0, 0, 0, 0.2)"};
+    background: rgba(0, 0, 0, 0.2);
     z-index: -1;
   }
 
@@ -62,23 +56,25 @@ const StyledHero = styled.header`
 
   @media screen and (min-width: 1180px) {
     &::before {
-      background: ${({ theme }) =>
-        theme.name === "light"
-          ? `url(${Light}) top center fixed no-repeat`
-          : `url(${Dark}) top center fixed no-repeat`};
+      background: url(${Dark}) top center fixed no-repeat;
       background-size: 100vw auto;
     }
   }
 
   @media screen and (min-width: 1367px) {
     &::before {
-      background: ${({ theme }) =>
-        theme.name === "light"
-          ? `url(${Light}) center center fixed no-repeat`
-          : `url(${Dark}) center center fixed no-repeat`};
+      background: url(${Dark}) center center fixed no-repeat;
       background-size: cover;
     }
   }
+
+  // Customize text color based on dark mode
+  h1,
+  h2 {
+    color: #F5F2E8;
+  }
+
+  // Customize other styles as needed
 `;
 
 export default function Hero() {
@@ -95,10 +91,7 @@ export default function Hero() {
             </div>
           </Col>
           <Col className="d-none d-md-block">
-            <img
-              src={HSPLogo}
-              alt="HSP Logo"
-            />
+            <img src={HSPLogo} alt="HSP Logo" />
           </Col>
         </Row>
         <Row className="align-items-end down-container">
