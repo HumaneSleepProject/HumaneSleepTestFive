@@ -27,7 +27,7 @@ export const Loading = styled.div`
   height: 5rem;
   border: 5px solid;
   border-radius: 50%;
-  border-top-color: var(--primary);
+  border-top-color: var(--clr-primary-5); /* Enforcing dark mode color */
   margin: 1rem auto;
   animation: ${spinner} 0.6s linear infinite;
 `;
@@ -46,22 +46,19 @@ export const Title = styled.div`
     border-radius: 0.25rem;
     background: var(--clr-primary-5);
     margin: 0 auto 1.5rem auto;
-    background: ${({ theme }) =>
-      theme.name === "light"
-        ? "linear-gradient(to left, var(--primary-light), var(--primary-dark))"
-        : "linear-gradient(to right, var(--primary-dark), var(--primary-light))"};
+    background: linear-gradient(to right, var(--primary-dark), var(--primary-light)); /* Enforcing dark mode gradient */
   }
 `;
 
 // Back to top link
-const StyledDiv = styled.div`
+export const StyledDiv = styled.div`
   position: fixed;
   bottom: calc(var(--min-footer-height) + 1.5rem);
   right: 1.5rem;
   visibility: hidden;
 
   .link-icons {
-    color: ${({ theme }) => (theme.name === "light" ? "#45413C" : "#F5F2E8")};
+    color: #F5F2E8; /* Enforcing dark mode color */
   }
 
   &.show-up {

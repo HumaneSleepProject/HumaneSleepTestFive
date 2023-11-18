@@ -4,70 +4,25 @@ import { useAppContext } from "../appContext";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-// Icons
+import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import { Icon } from "@iconify/react";
-// Components
-import { Container, Nav, Navbar } from "react-bootstrap";
-// Images
 import Logo from "./defaultNavLogo.svg";
-
-// #region styled-components
-const StyledSwitch = styled.label`
-  /* Slider pill */
-  display: flex;
-  width: 3.2rem;
-  font-size: 1.5rem;
-  border-radius: 30px;
-  transition: var(--transition);
-  border: 2px solid;
-
-  /* Hide defualt checkbox */
-  input[type="checkbox"] {
-    height: 0;
-    width: 0;
-    opacity: 0;
-  }
-
-  /* Move span when checked */
-  input[type="checkbox"]:checked + div {
-    transform: translateX(100%);
-  }
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: var(--transition);
-  }
-`;
+import SocialLinks from "./SocialLinks"; // Import SocialLinks component
 
 const FixedNavSpacer = styled.div`
   height: var(--nav-height);
+  background-color: #333;
 `;
 
-function ThemeToggle() {
-  const { theme, toggleTheme, closeExpanded } = useAppContext();
+const DonateButton = styled(Button)`
+  background-color: #4caf50;
+  border-color: #4caf50;
+  &:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+  }
+`;
 
-  return (
-    <StyledSwitch onClick={closeExpanded}>
-      <input
-        type="checkbox"
-        aria-label={`Toggle theme, currently ${theme}.`}
-        onClick={toggleTheme}
-      />
-      <div>
-        {theme === "light" ? (
-          <Icon icon="game-icons:sunflower" />
-        ) : (
-          <Icon icon="game-icons:moon" />
-        )}
-      </div>
-    </StyledSwitch>
-  );
-}
-// #endregion
-
-// #region component
 const propTypes = {
   Logo: PropTypes.node.isRequired,
 };
@@ -76,33 +31,20 @@ const defaultProps = {
   Logo: Logo,
 };
 
-export default function NavBar({ Logo }) {
-  const { theme, isExpanded, closeExpanded, toggleExpanded } = useAppContext();
+export default function NavBar({ Logo, navLinks }) {
+  const { isExpanded, closeExpanded, toggleExpanded } = useAppContext();
   const { pathname } = useLocation();
-  const navLinks = {
-    routes: [
-      { id: "1R", name: "Home", route: "/" },
-      { id: "2R", name: "All Past Events", route: "/All-Projects" },
-    ],
-    to: [
-      { id: "1T", name: "Home", to: "Home" },
-      { id: "2T", name: "About Us", to: "About" },
-      { id: "3T", name: "Links", to: "Skills" },
-      { id: "4T", name: "All Events", to: "Projects" },
-      { id: "5T", name: "Contact", to: "Contact" },
-    ],
-  };
 
   return (
     <>
       <FixedNavSpacer />
       <Navbar
         id="nav"
-        collapseOnSelect={true}
+        collapseOnSelect
         expand="lg"
         expanded={isExpanded}
-        bg={theme === "light" ? "light" : "dark"}
-        variant={theme === "light" ? "light" : "dark"}
+        bg="dark"
+        variant="dark"
         fixed="top"
       >
         <Container>
@@ -122,41 +64,38 @@ export default function NavBar({ Logo }) {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav navbarScroll className="me-auto">
               {pathname === "/"
-                ? navLinks.to.map((el) => {
-                    return (
-                      <Nav.Item key={el.id}>
-                        <ScrollLink
-                          to={el.to}
-                          spy={true}
-                          activeClass="active"
-                          className="nav-link"
-                          onClick={closeExpanded}
-                        >
-                          {el.name}
-                        </ScrollLink>
-                      </Nav.Item>
-                    );
-                  })
-                : navLinks.routes.map((el) => {
-                    return (
-                      <Nav.Item key={el.id}>
-                        <Link
-                          to={el.route}
-                          className={
-                            pathname === el.route
-                              ? "nav-link active"
-                              : "nav-link"
-                          }
-                          onClick={closeExpanded}
-                        >
-                          {el.name}
-                        </Link>
-                      </Nav.Item>
-                    );
-                  })}
+                ? navLinks.to.map((el) => (
+                    <Nav.Item key={el.id}>
+                      <ScrollLink
+                        to={el.to}
+                        spy
+                        activeClass="active"
+                        className="nav-link"
+                        onClick={closeExpanded}
+                      >
+                        {el.name}
+                      </ScrollLink>
+                    </Nav.Item>
+                  ))
+                : navLinks.routes.map((el) => (
+                    <Nav.Item key={el.id}>
+                      <Link
+                        to={el.route}
+                        className={
+                          pathname === el.route ? "nav-link active" : "nav-link"
+                        }
+                        onClick={closeExpanded}
+                      >
+                        {el.name}
+                      </Link>
+                    </Nav.Item>
+                  ))}
             </Nav>
             <Nav>
-              <ThemeToggle />
+              <SocialLinks /> {/* Add SocialLinks component */}
+              <DonateButton variant="success" href="#donate">
+                Donate Now
+              </DonateButton>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -167,4 +106,3 @@ export default function NavBar({ Logo }) {
 
 NavBar.propTypes = propTypes;
 NavBar.defaultProps = defaultProps;
-// #endregion

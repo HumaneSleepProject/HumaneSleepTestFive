@@ -4,13 +4,13 @@ import SocialLinks from "./SocialLinks";
 
 const StyledFooter = styled.footer`
   min-height: var(--min-footer-height);
-  background: var(--primary);
+  background: #333;  // Set a dark background color for the footer
 
   a {
-    color: #45413c;
+    color: #F5F2E8;  // Set a light color for the links
 
     &:hover {
-      color: #fbfdff;
+      color: #61DBFB;  // Set a primary color for hover
     }
   }
 `;
