@@ -18,7 +18,7 @@ const StyledFooter = styled.footer`
 export default function Footer() {
   return (
     <StyledFooter className="d-flex align-items-center justify-content-center p-2">
-      <span style={{ fontStyle: '12px'}}> Website Template from Michael Huber : https://github.com/mshuber1981</span>
+      <span style={{ fontStyle: '12px'}}> Humane Sleep Project is a Registered 501(c)(3) Organization under the State of California </span>
     </StyledFooter>
   );
 }
