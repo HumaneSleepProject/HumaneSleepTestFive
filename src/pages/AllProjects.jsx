@@ -191,7 +191,7 @@ export default function AllProjects() {
       <Container>
         <Row className="align-items-center text-center">
           <Col>
-            <h1 className="mb-3 display-3 title">Blog Post 1</h1>
+            <h1 className="mb-3 display-3 title">Oakland Outreach</h1>
           </Col>
         </Row>
         <Row className="align-items-left text-left">

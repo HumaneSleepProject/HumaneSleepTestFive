@@ -16,8 +16,9 @@ import { Icon } from "@iconify/react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Title, Loading } from "./globalStyledComponents";
 import StyledCard from "./StyledCard";
+import GroupHSP from "../images/GroupHSP.jpg"
 
-export default function Projects() {
+export default function Events() {
   const [mainProjects, setMainProjects] = React.useState([]);
   const { theme } = useAppContext();
   const isLoading = useSelector(selectIsLoading);
@@ -53,6 +54,22 @@ export default function Projects() {
             </Title>
           </Container>
           <Container className="text-center mt-5">
+            <Row>
+              <Col className="d-none d-md-block text-center">
+                <img
+                  src={GroupHSP}
+                  alt="GroupHSP"
+                  loading="lazy"
+                  className="mx-auto rounded-circle"
+                  style={{ width: "15rem", height: "15rem" }}
+                />
+              </Col>  
+              <Col className="d-flex flex-column text-center">
+                <Container>
+                  <p>At the Humane Sleep Project, based in Pleasanton, we've started an outreach into Oakland to assist the homeless community by providing crucial sleeping supplies and support to alleviate their hardships.</p>
+                </Container>
+              </Col>
+            </Row>
             <Link to="/All-Projects">
               <Button
                 size="lg"
