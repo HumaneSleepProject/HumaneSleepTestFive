@@ -2,6 +2,7 @@ import { useAppContext } from "../appContext";
 import { Element } from "react-scroll";
 // Data
 import { skillData, resume } from "../data";
+import { Link } from "react-router-dom";
 // Components
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
@@ -19,31 +20,24 @@ export default function Skills() {
             <div className="underline"></div>
           </Title>
           <Row className="mt-3 align-items-center">
-            {/* {skillData.map((skills) => {
-              return (
-                <Col xs={4} key={skills.id} className="my-md-5">
-                  <figure>
-                    {skills.skill}
-                    <figcaption>{skills.name}</figcaption>
-                  </figure>
-                </Col>
-              );
-            })} */}
             <div className="d-flex align-items-center justify-content-center">
               <SocialLinks />
             </div>
           </Row>
-          {resume && (
-            <a href={resume}>
-              <Button
-                size="lg"
-                variant={theme === "light" ? "outline-dark" : "outline-light"}
-                className="mt-5"
-              >
-                R&eacute;sum&eacute;
-              </Button>
-            </a>
-          )}
+          <Row className="mt-3 align-items-center">
+            <div className="d-flex align-items-center justify-content-center">
+              <Link to="/All-Projects">
+                <Button
+                  size="lg"
+                  variant={
+                    theme === "light" ? "outline-dark" : "outline-light"
+                  }
+                >
+                  To All Events/Blogs
+                </Button>
+              </Link>
+            </div>
+          </Row>
         </Container>
       </section>
     </Element>

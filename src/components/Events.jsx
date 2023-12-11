@@ -42,42 +42,27 @@ export default function Events() {
     },
     [data]
   );
-
+  
+  let donateUrl = "https://www.paypal.com/donate?hosted_button_id=24CGE6XCKU4H4";
   return (
     <Element name={"Projects"} id="projects">
       <section className="section">
         <Container>
           <Container className="d-flex">
             <Title>
-              <h2>All Events</h2>
+              <h2>Donation</h2>
               <div className="underline"></div>
             </Title>
           </Container>
           <Container className="text-center mt-5">
-            <Row>
-              <Col className="d-none d-md-block text-center">
-                <img
-                  src={GroupHSP}
-                  alt="GroupHSP"
-                  loading="lazy"
-                  className="mx-auto rounded-circle"
-                  style={{ width: "15rem", height: "15rem" }}
-                />
-              </Col>  
-              <Col className="d-flex flex-column text-center">
-                <Container>
-                  <p>At the Humane Sleep Project, based in Pleasanton, we've started an outreach into Oakland to assist the homeless community by providing crucial sleeping supplies and support to alleviate their hardships.</p>
-                </Container>
-              </Col>
-            </Row>
-            <Link to="/All-Projects">
+            <Link to={donateUrl}>
               <Button
                 size="lg"
                 variant={
                   theme === "light" ? "outline-dark" : "outline-light"
                 }
               >
-                To All Events
+                Donate Today!
               </Button>
             </Link>
           </Container>

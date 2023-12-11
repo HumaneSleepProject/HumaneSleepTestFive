@@ -49,7 +49,7 @@ export const mehakInfo = "My name is Mehak Sharma, the Social Media Director at 
 
 export const adiInfo = "My name is Aditi Sharma and I am the COO and Secretary of Humane Sleep Project. I co-founded the Humane Sleep Project with a belief that every individual, regardless of their financial situation, should have access to essential sleeping supplies. I am committed to providing kindness and vital resources to ensure the well-being of every individual experiencing homelessness through HSP!";
 
-export const danielInfo = "I joined Humane Sleep Project as the Director of Engineering as I am passionate about attempting to alleviate the hardships of those less fortunate in the area that I have grown up in. Living in the Bay Area, I was able to hear and learn about their unique experiences and hope to give back to the community.";
+export const danielInfo = "My name is Daniel Qian and I joined Humane Sleep Project as the Director of Engineering. I am passionate about attempting to alleviate the hardships of those less fortunate in the area that I have grown up in. Living in the Bay Area, I was able to hear and learn about their unique experiences and hope to give back to the community.";
 /* Skills
  ************************************************************** 
   Add or remove skills in the SAME format below, choose icons here - https://icon-sets.iconify.design/

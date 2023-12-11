@@ -11,8 +11,9 @@ import GroupHSP from "../images/GroupHSP.jpg"
 import SidProfPic from "../images/SidProfPic.png"
 import AbhiProfPic from "../images/AbhiPic.jpeg"
 import MehakProfPic from "../images/MehakPic.jpeg"
-import AdiProfPic from "../images/AditiPic.JPG"
+import AdiProfPic from "../images/AdiSquarePic.png"
 import DanielProfPic from "../images/DanielPic.jpg"
+import LukeProfPic from "../images/LukeSquarePic.png"
 import HSPLogo from "./hsp.png"
 
 const StyledAboutMe = styled.section`
@@ -84,6 +85,11 @@ export default function AboutMe() {
                 style={{ width: "15rem", height: "15rem" }}
               />
             </Col>
+            <Col className="d-none d-md-block text-center">
+              <Title>
+                <h2>Mission Statement</h2>
+              </Title>
+            </Col>
             <Col className="d-flex flex-column text-center">
               <Container>
                 <p>{bio}</p>
@@ -95,7 +101,7 @@ export default function AboutMe() {
           <Row className="align-items-center mt-5">
           </Row>
           {AboutPersonComponent(SidProfPic, sidInfo, AdiProfPic, adiInfo)}
-          {AboutPersonComponent(AbhiProfPic, abhiInfo, HSPLogo, lukeInfo)}
+          {AboutPersonComponent(AbhiProfPic, abhiInfo, LukeProfPic, lukeInfo)}
           {AboutPersonComponent(MehakProfPic, mehakInfo, DanielProfPic, danielInfo)}
         </Container>
       </StyledAboutMe>
