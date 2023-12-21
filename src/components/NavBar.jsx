@@ -82,13 +82,14 @@ export default function NavBar({ Logo }) {
   const navLinks = {
     routes: [
       { id: "1R", name: "Home", route: "/" },
-      { id: "2R", name: "All Past Events", route: "/All-Projects" },
+      { id: "2R", name: "All Past Events", route: "/All-Projects" }
     ],
     to: [
       { id: "1T", name: "Home", to: "Home" },
       { id: "2T", name: "About Us", to: "About" },
       { id: "4T", name: "Donation", to: "Projects" },
       { id: "3T", name: "Links / Events", to: "Skills" },
+      // { id: "1R", name: "Links / Events", route: "/All-Projects" },
       { id: "5T", name: "Contact", to: "Contact" },
     ],
   };

@@ -39,17 +39,17 @@ export const Blog = <Icon icon="ph:link-bold" />;
 export const moreInfo =
   "Humane Sleep Project is dedicated to providing assistance to individuals facing homelessness by ensuring access to essential sleep provisions. Recognizing sleep as a fundamental human necessity, we strongly believe that every person deserves the opportunity to enjoy a restful and comfortable night's sleep.";
 
-export const sidInfo = "My name is Sidharth Sreedar, and I’m the CEO of Humane Sleep Project. I created this organization envisioning a future of corrected sleeping measures for people of unprivileged communities. This endeavor will help the community foster change in others, and this is something in my personal life I strive to do.";
+export const sidInfo = "Sidharth Sreedar - Executive Director Created this organization envisioning a future of providing sleeping measures for people of unprivileged communities.";
 
-export const abhiInfo = "I'm Abhi Vishwas, joining HSP as the Director of Finance aligns with my mission to make meaningful impacts by improving the well-being of both our community and the homeless. I am committed to leveraging my background in business and financial acumen to support HSP's mission of providing healthy sleep solutions to those in need.";
+export const abhiInfo = "Abhi Vishwas - Director of Finance This aligns with my mission to make meaningful impacts by improving the well-being of both our community and the homeless.";
 
-export const lukeInfo = "My name is Luke Decroix and I am the Project Coordinator for Humane Sleep project. While being raised in different areas of the Bay Area, I have had the opportunity to volunteer over 1000+ hours to help those in need.";
+export const lukeInfo = "Luke Decroix - Project Coordinator While being raised in different areas of the Bay Area, I have had the opportunity to volunteer over 1000+ hours to help those in need.";
 
-export const mehakInfo = "My name is Mehak Sharma, the Social Media Director at HSP, and I am dedicated to advocating for human well-being and social impact. My background in organizing drives for women in need as well as my work in mental health have strengthened my dedication to supporting vulnerable communities and promoting well-being.";
+export const mehakInfo = "Mehak Sharma - Social Media Director My background in organizing drives for women in need as well as my work in mental health have strengthened my dedication to supporting vulnerable communities and promoting well-being.";
 
-export const adiInfo = "My name is Aditi Sharma and I am the COO and Secretary of Humane Sleep Project. I co-founded the Humane Sleep Project with a belief that every individual, regardless of their financial situation, should have access to essential sleeping supplies. I am committed to providing kindness and vital resources to ensure the well-being of every individual experiencing homelessness through HSP!";
+export const adiInfo = "Aditi Sharma - COO and Secretary  Cofounded Humane Sleep Project with a belief that every individual, regardless of their financial situation, should have access to essential sleeping supplies.";
 
-export const danielInfo = "My name is Daniel Qian and I joined Humane Sleep Project as the Director of Engineering. I am passionate about attempting to alleviate the hardships of those less fortunate in the area that I have grown up in. Living in the Bay Area, I was able to hear and learn about their unique experiences and hope to give back to the community.";
+export const danielInfo = "Daniel Qian - Director of Engineering Passionate about attempting to alleviate the hardships of those less fortunate in the Bay Area.";
 /* Skills
  ************************************************************** 
   Add or remove skills in the SAME format below, choose icons here - https://icon-sets.iconify.design/

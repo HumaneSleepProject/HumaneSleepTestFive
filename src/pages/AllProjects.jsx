@@ -9,19 +9,27 @@ import { Icon } from "@iconify/react";
 import {
   Col,
   Container,
-  FormControl,
-  InputGroup,
   Pagination,
   Row,
 } from "react-bootstrap";
-import {
-  BackToTop,
-  Title,
-  Loading,
-} from "../components/globalStyledComponents";
-import StyledCard from "../components/StyledCard";
-import Footer from "../components/Footer";
-import { BLight, BDark } from "../data";
+
+// const StyledSection = styled.section`
+//   min-height: calc(80vh - var(--min-footer-height) - var(--nav-height));
+
+//   .input-group {
+//     max-width: 90vw;
+//   }
+
+//   .row {
+//     min-height: var(--card-height);
+//   }
+
+//   @media screen and (min-width: 800px) {
+//     .input-group {
+//       width: 75%;
+//     }
+//   }
+// `;
 
 const StyledSection = styled.section`
   position: relative;
@@ -38,10 +46,6 @@ const StyledSection = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${({ theme }) =>
-      theme.name === "light"
-        ? "linear-gradient(135deg, var(--primary), var(--bs-light))"
-        : "linear-gradient(135deg, var(--primary), var(--bs-dark))"};
     z-index: -2;
   }
 
@@ -53,10 +57,6 @@ const StyledSection = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${({ theme }) =>
-      theme.name === "light"
-        ? "rgba(255, 255, 255, 0.2)"
-        : "rgba(0, 0, 0, 0.2)"};
     z-index: -1;
   }
 
@@ -71,21 +71,11 @@ const StyledSection = styled.section`
 
   @media screen and (min-width: 1180px) {
     &::before {
-      background: ${({ theme }) =>
-        theme.name === "light"
-          ? `url(${BLight}) top center fixed no-repeat`
-          : `url(${BDark}) top center fixed no-repeat`};
-      background-size: 100vw auto;
     }
   }
 
   @media screen and (min-width: 1367px) {
     &::before {
-      background: ${({ theme }) =>
-        theme.name === "light"
-          ? `url(${BLight}) center center fixed no-repeat`
-          : `url(${BDark}) center center fixed no-repeat`};
-      background-size: cover;
     }
   }
 `;
@@ -100,13 +90,6 @@ export default function AllProjects() {
   const error = useSelector(selectError);
   const data = useSelector(selectData);
   const { name } = useSelector(homeData);
-
-  // React.useEffect(
-  //   function () {
-  //     document.title = `${name} | All Projects`;
-  //   },
-  //   [name]
-  // );
 
   document.title = `HumaneSleepProject | All Events`;
 
@@ -176,17 +159,6 @@ export default function AllProjects() {
   
   //Will just be a static page of blog posts and links
   return (
-    // <div>
-    //   <h1>
-    //     Blog Post 1
-    //   </h1>
-    //   <h1>
-    //     Blog Post 2
-    //   </h1>
-    //   <h1>
-    //     Blog Post 3
-    //   </h1>
-    // </div>
     <StyledSection>
       <Container>
         <Row className="align-items-center text-center">
@@ -194,14 +166,19 @@ export default function AllProjects() {
             <h1 className="mb-3 display-3 title">Oakland Outreach</h1>
           </Col>
         </Row>
-        <Row className="align-items-left text-left">
+        <Row>
           <Col>
-            <h2> At the Humane Sleep Project, based in Pleasanton, we've started an outreach into Oakland to assist the homeless community by providing crucial sleeping supplies and support to alleviate their hardships.
+            <p>tl:dr</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <p> At the Humane Sleep Project, based in Pleasanton, we've started an outreach into Oakland to assist the homeless community by providing crucial sleeping supplies and support to alleviate their hardships.
 
 We recognize the importance of maintaining hygiene for overall health and well-being, especially for those without homes. Therefore, we assembled 100 hygiene kits comprising essentials like toothbrushes, soap, and shampoo, and distributed them in Oakland among various homeless encampments and donated some to local housing projects.
 
 Our first outreach not only provided vital items but also allowed us to understand the needs of the homeless community better and forge meaningful connections.
- </h2>
+ </p>
           </Col>
         </Row>
       </Container>

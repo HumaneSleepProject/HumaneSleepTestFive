@@ -43,13 +43,13 @@ function AboutPersonComponent(image1, description1, image2, description2) {
         </Container>
       </Col>
       <Col className="d-none d-md-block text-center">
-        <img
+        {image2 && <img
           src={image2}
           alt="ProfileImage"
           loading="lazy"
           className="mx-auto rounded-circle"
           style={{ width: "15rem", height: "15rem" }}
-        />
+        />}
       </Col>
       <Col className="d-flex flex-column text-center">
         <Container>
@@ -76,33 +76,33 @@ export default function AboutMe() {
           </Container>
           <Row className="align-items-center mt-5">
             <div>
-            <Col className="d-none d-md-block text-center">
-              <img
-                src={HSPLogo}
-                alt="GroupHSP"
-                loading="lazy"
-                className="mx-auto rounded-circle"
-                style={{ width: "15rem", height: "15rem" }}
-              />
-            </Col>
-            <Col className="d-none d-md-block text-center">
-              <Title>
-                <h2>Mission Statement</h2>
-              </Title>
-            </Col>
-            <Col className="d-flex flex-column text-center">
-              <Container>
-                <p>{bio}</p>
-                {moreInfo && <p>{moreInfo}</p>}
-              </Container>
-            </Col>
+              <Col className="d-none d-md-block text-center">
+                <img
+                  src={HSPLogo}
+                  alt="GroupHSP"
+                  loading="lazy"
+                  className="mx-auto rounded-circle"
+                  style={{ width: "15rem", height: "15rem" }}
+                />
+              </Col>
+              <Col className="d-none d-md-block text-center">
+                <Title>
+                  <h2>Mission Statement</h2>
+                </Title>
+              </Col>
+              <Col className="d-flex flex-column text-center">
+                <Container>
+                  <p>{bio}</p>
+                  {moreInfo && <p>{moreInfo}</p>}
+                </Container>
+              </Col>
             </div>
           </Row>
           <Row className="align-items-center mt-5">
           </Row>
           {AboutPersonComponent(SidProfPic, sidInfo, AdiProfPic, adiInfo)}
-          {AboutPersonComponent(AbhiProfPic, abhiInfo, LukeProfPic, lukeInfo)}
-          {AboutPersonComponent(MehakProfPic, mehakInfo, DanielProfPic, danielInfo)}
+          {AboutPersonComponent(AbhiProfPic, abhiInfo, MehakProfPic, mehakInfo)}
+          {AboutPersonComponent(DanielProfPic, danielInfo, null, null)}
         </Container>
       </StyledAboutMe>
     </Element>
