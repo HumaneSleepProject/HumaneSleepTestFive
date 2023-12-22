@@ -4,9 +4,10 @@ import { selectData } from "../pages/homeSlice";
 // Components
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
-import Skills from "../components/Skills";
+import EventsBlogs from "../components/EventsBlogs";
 import Events from "../components/Events";
 import Contact from "../components/Contact";
+import Maps from "../components/Map";
 import { BackToTop } from "../components/globalStyledComponents";
 import Footer from "../components/Footer";
 
@@ -28,7 +29,8 @@ export default function Home() {
       <main>
         <AboutMe />
         <Events />
-        <Skills />
+        <Maps />
+        <EventsBlogs />
         <Contact />
       </main>
       <BackToTop home={"Home"} />

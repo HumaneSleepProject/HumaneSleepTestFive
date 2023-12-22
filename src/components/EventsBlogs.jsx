@@ -8,11 +8,11 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
 import SocialLinks from "./SocialLinks";
 
-export default function Skills() {
+export default function EventsBlogs() {
   const { theme } = useAppContext();
 
   return (
-    <Element name={"Skills"} id="skills">
+    <Element name={"EventsBlogs"} id="eventsblogs">
       <section className="section">
         <Container className="text-center">
           <Title>
